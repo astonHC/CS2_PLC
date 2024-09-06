@@ -25,7 +25,5 @@
 #define     SUBTRACT(VALUE_A, VALUE_B)          ((VALUE_A) - (VALUE_B))
 #define     DIVIDE(VALUE_A, VALUE_B)            ((VALUE_B) != 0 ? ((VALUE_A) / (VALUE_B)) : -1)
 
-int OPERATION_TYPE(int, int);
-
 #endif
 #endif
