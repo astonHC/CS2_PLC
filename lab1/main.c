@@ -5,21 +5,51 @@
 /* THIS FILE PERTAINS TOWARDS THE FUNCTIONALITY OF DISCERNING THE TOTAL */
 /* WHEN TWO INTEGERS ARE ADDED */
 
-/* SYSTEM INCLUDES */
+/* NESTED INCLUDES */
 
-#include <stdio.h>
+#include "util.h"
+
+static int INDEX_TOTAL(char OPERATION)
+{   
+    int RESULT = (OPERATION == 'M') ? 1 : 0;
+
+    for (int INDEX = 0; INDEX <= 10; INDEX++)
+    {
+        switch (OPERATION)
+        {
+            case 'A':
+                RESULT = ADD(RESULT, INDEX);
+                break;
+
+            case 'M':
+                RESULT = MULTIPLY(RESULT, INDEX);
+                break;
+
+            case 'S':
+                RESULT = SUBTRACT(RESULT, INDEX);
+                break;
+
+            case 'D':
+                RESULT = DIVIDE(RESULT, INDEX);
+                break;
+        
+            default:
+                fprintf(stderr, "Invalid Operation\n");
+                exit(1);
+        }
+    }
+
+    return RESULT;
+}
 
 static char FIND_TOTAL(void)
 {
-    int INDEX = 0;
-    int TOTAL = 0;
+    char OP;
 
-    for (INDEX = 0; INDEX <= 10; INDEX++)
-    {
-        TOTAL = TOTAL + INDEX;
-    }
+    fprintf(stdout, "Choose an Operator, (A, M, S, D)\n");
+    scanf("%c", &OP);
 
-    return TOTAL;
+    return INDEX_TOTAL(OP);
 }
 
 int main(void)
