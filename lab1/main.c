@@ -9,6 +9,9 @@
 
 #include "util.h"
 
+/* INDEX WHAT THE SUM OF THE OPERTATION WILL BE BASED ON CHAR LITERAL */
+/* COULDN'T QUITE FIGURE OUT HOW TO MAKE IT MORE MODULAR */ 
+
 static int INDEX_TOTAL(char OPERATION)
 {   
     int RESULT = (OPERATION == 'M') ? 1 : 0;
@@ -22,7 +25,7 @@ static int INDEX_TOTAL(char OPERATION)
                 break;
 
             case 'M':
-                RESULT = MULTIPLY(RESULT, INDEX);
+                RESULT = MULTIPLY(INDEX, RESULT);
                 break;
 
             case 'S':
@@ -41,6 +44,8 @@ static int INDEX_TOTAL(char OPERATION)
 
     return RESULT;
 }
+
+/* SCAN FOR RELEVANT INPUT PROVIDED BY THE USER AND DISCERN THAT BASED ON CHAR LITERAL */
 
 static char FIND_TOTAL(void)
 {
