@@ -19,7 +19,7 @@ typedef struct ARGS
 {
     unsigned char INPUT[MAX_INPUT_BUFFER];
     unsigned int RESULT;
-    unsigned char RESULT_CHECK;
+    unsigned char* RESULT_CHECK;
 
 } ARGS;
 
@@ -29,12 +29,6 @@ typedef struct ARGS
 int GET_VALUE(void)
 {
     struct ARGS* ARGS = malloc(sizeof(struct ARGS));
-
-    if(ARGS->RESULT_CHECK == 0)
-    {
-        fprintf(stderr, "Could not evaluate User Input\n");
-        return 1;
-    }
 
     fprintf(stdout, "Input a value\n");
     fgets((char*)ARGS->INPUT, MAX_INPUT_BUFFER, stdin);
@@ -62,7 +56,7 @@ int GET_VALUE(void)
 int main(void)
 {
     struct ARGS* ARGS = malloc(sizeof(struct ARGS));
-    scanf((char*)GET_VALUE());
+    GET_VALUE();
 
     free(ARGS);
     return 0;
