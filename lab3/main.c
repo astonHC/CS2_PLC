@@ -55,9 +55,6 @@ int GET_VALUE(void)
 
 int main(void)
 {
-    struct ARGS* ARGS = malloc(sizeof(struct ARGS));
     GET_VALUE();
-
-    free(ARGS);
     return 0;
 }
