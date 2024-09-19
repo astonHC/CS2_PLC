@@ -14,7 +14,7 @@
 
 static int INDEX_TOTAL(char OPERATION)
 {   
-    int RESULT = (OPERATION == 'M') ? 1 : 0;
+    int RESULT = 0;
 
     for (int INDEX = 0; INDEX <= 10; INDEX++)
     {
