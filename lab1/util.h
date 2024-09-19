@@ -20,9 +20,9 @@
 #else
 #define USE_UTIL
 
-#define     ADD(VALUE_A, VALUE_B)               ((VALUE_A) + (VALUE_B))
-#define     MULTIPLY(VALUE_A, VALUE_B)          ((VALUE_A) * (VALUE_B))
-#define     SUBTRACT(VALUE_A, VALUE_B)          ((VALUE_A) - (VALUE_B))
+#define     ADD(VALUE_A, VALUE_B)               (VALUE_A + VALUE_B)
+#define     MULTIPLY(VALUE_A, VALUE_B)          (VALUE_A * VALUE_B)
+#define     SUBTRACT(VALUE_A, VALUE_B)          (VALUE_A - VALUE_B)
 #define     DIVIDE(VALUE_A, VALUE_B)            ((VALUE_B) != 0 ? ((VALUE_A) / (VALUE_B)) : -1)
 
 #endif
