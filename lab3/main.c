@@ -17,7 +17,7 @@
 
 typedef struct ARGS
 {
-    char INPUT[MAX_INPUT_BUFFER];
+    unsigned char INPUT[MAX_INPUT_BUFFER];
     unsigned int RESULT;
     unsigned char RESULT_CHECK;
 
@@ -37,7 +37,7 @@ int GET_VALUE(void)
     }
 
     fprintf(stdout, "Input a value\n");
-    fgets(ARGS->INPUT, MAX_INPUT_BUFFER, stdin);
+    fgets((char*)ARGS->INPUT, MAX_INPUT_BUFFER, stdin);
 
     /* READ THE CORRESPONDING INFORMATION PROVIDED BY THE USER */
     /* IF IT DOES NOT COMPLY WITH SAID CORRESPONDENCE, A FUNNY WILL APPEAR */ 
