@@ -3,9 +3,3 @@ def add():
     y = 10
     z = x + y
     print("The sum of x and y is:" + str(z))
-
-def main():
-    add()
-
-if __name__ == "__main__":
-    main()
