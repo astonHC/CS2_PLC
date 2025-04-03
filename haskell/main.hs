@@ -2,4 +2,4 @@ import Add
 
 main :: IO()
 
-main = print(addition 3 5)
+main = putStrLn ("The answer is: " ++ show(addition 3 5))
