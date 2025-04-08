@@ -15,5 +15,13 @@ def main():
 
     print("the elements of the list are: ", list2)
 
+    ## SONG
+
+    song1 = Piece("Bohemian Rhapsody", "Queen", 354.0) 
+    print("song1 = %s" % song1)
+
+    ## SPECIFICALLY CALL THE DUNDER METHOD
+    print(repr(song1))
+
 if __name__ == "__main__":
     main()
