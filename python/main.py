@@ -10,5 +10,9 @@ def main():
 
     print(func(getString, "good morning", "up"))
 
+    ## LAMBDA EXP.
+
+    print("the elements of the list are: ", list2)
+
 if __name__ == "__main__":
     main()
