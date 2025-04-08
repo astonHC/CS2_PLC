@@ -1,6 +1,7 @@
 from my_print import func, getString
 from add import add
-
+from list_comp import list1 
+from list_comp import list2
 
 def main():
     add()
